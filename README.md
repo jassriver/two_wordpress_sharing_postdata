@@ -29,7 +29,7 @@ salve e feche o documento;
 Após isso, volte na wp_config.php do wordpress que vai receber o postdata e abaixo do WP_DEBUG adicione o seguinte trecho de código:
 ```
 /* Chama a tabela de configuração options2 */
-define( 'M7_OPTIONS_TABLE', 'wpcp_options2');
+define( 'RIVER_ESPELHO_OPTIONS_TABLE', 'wp_options2');
 ```
 
 salve e feche;
