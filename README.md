@@ -10,21 +10,27 @@ Após isso, no site que vai receber o post data, você vai precisar abrir o arqu
 Localize os códigos que falam sobre tabelas customizadas
 
 algo do gênero: (isso pode mudar no futuro)
+```
 if ( isset( $tables['users'] ) && defined( 'CUSTOM_USER_TABLE' ) ) {
   $tables['users'] = CUSTOM_USER_TABLE;
 }
+```
 
 a ideia é que antes dessa linha falando sobre a tabela custom de usuários você insira um código que modifique a tabela de opções do wordpress que vai receber o postdata
 use o código a baixo e insira antes do trecho de código citado anterior:
+```
 if ( isset( $tables['options'] ) && defined( 'RIVER_ESPELHO_OPTIONS_TABLE' ) ) {
   $tables['options'] = RIVER_ESPELHO_OPTIONS_TABLE;
 }
+```
 
 salve e feche o documento;
 
 Após isso, volte na wp_config.php do wordpress que vai receber o postdata e abaixo do WP_DEBUG adicione o seguinte trecho de código:
+```
 /* Chama a tabela de configuração options2 */
 define( 'M7_OPTIONS_TABLE', 'wpcp_options2');
+```
 
 salve e feche;
 
